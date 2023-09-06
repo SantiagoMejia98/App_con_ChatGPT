@@ -365,94 +365,94 @@ elif tipo_conversion == "Área":
         st.write(f"{millas_cuadradas} mi² = {km_cuadrados:.2f} km²")
     pass
 
-    elif tipo_conversion == "Energía":
-        conversiones_energia = [
-            "Julios a Calorías",
-            "Calorías a Kilojulios",
-            "Kilovatios-hora a Megajulios",
-            "Megajulios a Kilovatios-hora"
-        ]
+elif tipo_conversion == "Energía":
+    conversiones_energia = [
+        "Julios a Calorías",
+        "Calorías a Kilojulios",
+        "Kilovatios-hora a Megajulios",
+        "Megajulios a Kilovatios-hora"
+    ]
     
     conversion_seleccionada = st.selectbox("Selecciona la conversión de energía", conversiones_energia)
     
-        if conversion_seleccionada == "Julios a Calorías":
-                julios = st.number_input("Ingresa la energía en julios", value=0.0)
-            calorias = julios_to_calorias(julios)
-            st.write(f"{julios} J = {calorias:.2f} cal")
+    if conversion_seleccionada == "Julios a Calorías":
+        julios = st.number_input("Ingresa la energía en julios", value=0.0)
+        calorias = julios_to_calorias(julios)
+        st.write(f"{julios} J = {calorias:.2f} cal")
     
-        elif conversion_seleccionada == "Calorías a Kilojulios":
-            calorias = st.number_input("Ingresa la energía en calorías", value=0.0)
-            kilojulios = calorias_to_kilojulios(calorias)
-            st.write(f"{calorias} cal = {kilojulios:.2f} kJ")
+    elif conversion_seleccionada == "Calorías a Kilojulios":
+        calorias = st.number_input("Ingresa la energía en calorías", value=0.0)
+        kilojulios = calorias_to_kilojulios(calorias)
+        st.write(f"{calorias} cal = {kilojulios:.2f} kJ")
     
-        elif conversion_seleccionada == "Kilovatios-hora a Megajulios":
-            kw_hora = st.number_input("Ingresa la energía en kilovatios-hora", value=0.0)
-            megajulios = kw_hora_to_megajulios(kw_hora)
-            st.write(f"{kw_hora} kWh = {megajulios:.2f} MJ")
+    elif conversion_seleccionada == "Kilovatios-hora a Megajulios":
+        kw_hora = st.number_input("Ingresa la energía en kilovatios-hora", value=0.0)
+        megajulios = kw_hora_to_megajulios(kw_hora)
+        st.write(f"{kw_hora} kWh = {megajulios:.2f} MJ")
     
-        elif conversion_seleccionada == "Megajulios a Kilovatios-hora":
-            megajulios = st.number_input("Ingresa la energía en megajulios", value=0.0)
-            kw_hora = megajulios_to_kw_hora(megajulios)
-            st.write(f"{megajulios} MJ = {kw_hora:.2f} kWh")
-        pass
+    elif conversion_seleccionada == "Megajulios a Kilovatios-hora":
+        megajulios = st.number_input("Ingresa la energía en megajulios", value=0.0)
+        kw_hora = megajulios_to_kw_hora(megajulios)
+        st.write(f"{megajulios} MJ = {kw_hora:.2f} kWh")
+    pass
 
-    elif tipo_conversion == "Presión":
-        conversiones_presion = [
-            "Pascales a Atmosferas",
-            "Atmosferas a Pascales",
-            "Bares a Libras por pulgada cuadrada",
-            "Libras por pulgada cuadrada a Bares"
-        ]
+elif tipo_conversion == "Presión":
+    conversiones_presion = [
+        "Pascales a Atmosferas",
+        "Atmosferas a Pascales",
+        "Bares a Libras por pulgada cuadrada",
+        "Libras por pulgada cuadrada a Bares"
+    ]
     
-        conversion_seleccionada = st.selectbox("Selecciona la conversión de presión", conversiones_presion)
+    conversion_seleccionada = st.selectbox("Selecciona la conversión de presión", conversiones_presion)
     
-        if conversion_seleccionada == "Pascales a Atmosferas":
-            pascales = st.number_input("Ingresa la presión en pascales", value=0.0)
-            atmosferas = pascales_to_atmosferas(pascales)
-            st.write(f"{pascales} Pa = {atmosferas:.6f} atm")
+    if conversion_seleccionada == "Pascales a Atmosferas":
+        pascales = st.number_input("Ingresa la presión en pascales", value=0.0)
+        atmosferas = pascales_to_atmosferas(pascales)
+        st.write(f"{pascales} Pa = {atmosferas:.6f} atm")
     
-        elif conversion_seleccionada == "Atmosferas a Pascales":
-            atmosferas = st.number_input("Ingresa la presión en atmosferas", value=0.0)
-            pascales = atmosferas_to_pascales(atmosferas)
-            st.write(f"{atmosferas} atm = {pascales:.2f} Pa")
+    elif conversion_seleccionada == "Atmosferas a Pascales":
+        atmosferas = st.number_input("Ingresa la presión en atmosferas", value=0.0)
+        pascales = atmosferas_to_pascales(atmosferas)
+        st.write(f"{atmosferas} atm = {pascales:.2f} Pa")
     
-        elif conversion_seleccionada == "Bares a Libras por pulgada cuadrada":
-            bares = st.number_input("Ingresa la presión en bares", value=0.0)
-            libras_pulgada_cuadrada = bares_to_libras_pulgada_cuadrada(bares)
-            st.write(f"{bares} bar = {libras_pulgada_cuadrada:.2f} psi")
+    elif conversion_seleccionada == "Bares a Libras por pulgada cuadrada":
+        bares = st.number_input("Ingresa la presión en bares", value=0.0)
+        libras_pulgada_cuadrada = bares_to_libras_pulgada_cuadrada(bares)
+        st.write(f"{bares} bar = {libras_pulgada_cuadrada:.2f} psi")
     
-        elif conversion_seleccionada == "Libras por pulgada cuadrada a Bares":
-            libras_pulgada_cuadrada = st.number_input("Ingresa la presión en libras por pulgada cuadrada", value=0.0)
-            bares = libras_pulgada_cuadrada_to_bares(libras_pulgada_cuadrada)
-            st.write(f"{libras_pulgada_cuadrada} psi = {bares:.2f} bar")
-        pass
+    elif conversion_seleccionada == "Libras por pulgada cuadrada a Bares":
+        libras_pulgada_cuadrada = st.number_input("Ingresa la presión en libras por pulgada cuadrada", value=0.0)
+        bares = libras_pulgada_cuadrada_to_bares(libras_pulgada_cuadrada)
+        st.write(f"{libras_pulgada_cuadrada} psi = {bares:.2f} bar")
+    pass
 
-        elif tipo_conversion == "Tamaño de Datos":
-        conversiones_tamanio_datos = [
-            "Megabytes a Gigabytes",
-            "Gigabytes a Terabytes",
-            "Kilobytes a Megabytes",
-            "Terabytes a Petabytes"
-        ]
+elif tipo_conversion == "Tamaño de Datos":
+    conversiones_tamanio_datos = [
+        "Megabytes a Gigabytes",
+        "Gigabytes a Terabytes",
+        "Kilobytes a Megabytes",
+        "Terabytes a Petabytes"
+    ]
     
-        conversion_seleccionada = st.selectbox("Selecciona la conversión de tamaño de datos", conversiones_tamanio_datos)
+    conversion_seleccionada = st.selectbox("Selecciona la conversión de tamaño de datos", conversiones_tamanio_datos)
     
-        if conversion_seleccionada == "Megabytes a Gigabytes":
-            megabytes = st.number_input("Ingresa el tamaño en megabytes", value=0.0)
-            gigabytes = megabytes_to_gigabytes(megabytes)
-            st.write(f"{megabytes} MB = {gigabytes:.6f} GB")
+    if conversion_seleccionada == "Megabytes a Gigabytes":
+        megabytes = st.number_input("Ingresa el tamaño en megabytes", value=0.0)
+        gigabytes = megabytes_to_gigabytes(megabytes)
+        st.write(f"{megabytes} MB = {gigabytes:.6f} GB")
     
-        elif conversion_seleccionada == "Gigabytes a Terabytes":
-            gigabytes = st.number_input("Ingresa el tamaño en gigabytes", value=0.0)
-            terabytes = gigabytes_to_terabytes(gigabytes)
-            st.write(f"{gigabytes} GB = {terabytes:.6f} TB")
+    elif conversion_seleccionada == "Gigabytes a Terabytes":
+        gigabytes = st.number_input("Ingresa el tamaño en gigabytes", value=0.0)
+        terabytes = gigabytes_to_terabytes(gigabytes)
+        st.write(f"{gigabytes} GB = {terabytes:.6f} TB")
     
-        elif conversion_seleccionada == "Kilobytes a Megabytes":
-            kilobytes = st.number_input("Ingresa el tamaño en kilobytes", value=0.0)
-            megabytes = kilobytes_to_megabytes(kilobytes)
-            st.write(f"{kilobytes} KB = {megabytes:.6f} MB")
+    elif conversion_seleccionada == "Kilobytes a Megabytes":
+        kilobytes = st.number_input("Ingresa el tamaño en kilobytes", value=0.0)
+        megabytes = kilobytes_to_megabytes(kilobytes)
+        st.write(f"{kilobytes} KB = {megabytes:.6f} MB")
     
-        elif conversion_seleccionada == "Terabytes a Petabytes":
-            terabytes = st.number_input("Ingresa el tamaño en terabytes", value=0.0)
-            petabytes = terabytes_to_petabytes(terabytes)
-            st.write(f"{terabytes} TB = {petabytes:.6f} PB")
+    elif conversion_seleccionada == "Terabytes a Petabytes":
+        terabytes = st.number_input("Ingresa el tamaño en terabytes", value=0.0)
+        petabytes = terabytes_to_petabytes(terabytes)
+        st.write(f"{terabytes} TB = {petabytes:.6f} PB")
