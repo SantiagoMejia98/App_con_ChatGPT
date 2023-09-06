@@ -144,8 +144,7 @@ tipo_conversion = st.selectbox("Selecciona el tipo de conversión", [
     "Área",
     "Energía",
     "Presión",
-    "Tamaño de Datos",
-    # Agregar más tipos de conversión aquí...
+    "Tamaño de Datos"
 ])
 
 # Realizar la conversión según la selección
